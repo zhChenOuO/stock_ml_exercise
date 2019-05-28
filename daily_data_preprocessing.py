@@ -12,6 +12,8 @@ for i in range(len(_rows[1:])):
     if(i+2 >= len(_rows)):
         print(i)
         break
+    if i != 0:
+        _rows[i][6] = float(_rows[i][6])
     _rows[i+1].append(_rows[i+2][3])
 _rows[0].append('next_open')
 _rows = _rows[:len(_rows)-1]
